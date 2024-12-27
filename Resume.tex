@@ -1,0 +1,96 @@
+%-------------------------
+% Resume in Latex
+% Author : ETH juniors
+% Inspired by: https://github.com/sb2nov/resume
+% License : MIT
+% Website : www.ethjuniors.ch
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{bibentry}
+%\usepackage{biblatex}
+\input{glyphtounicode}
+
+
+
+% Custom font
+\usepackage[default]{lato}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Package for listing publications in resume
+
+\usepackage[style=ieee]{biblatex}
+\addbibresource{publications.bib}
+\DeclareFieldFormat{labelnumberwidth}{}
+\setlength{\biblabelsep}{0pt}
+\setlength{\biblabelsep}{0pt}
+\DeclareBibliographyCategory{conf}
+\DeclareBibliographyCategory{publ}
+\addtocategory{conf}{moraux}
+\addtocategory{publ}{angenendt,baez/article}
+
+
+
+%-------------------------%
+% Custom commands
+\begin{document}
+\include{custom-commands}
+
+%-------------------------------------------%
+%%%%%%  RESUME STARTS HERE  %%%%%
+
+%----------HEADING----------%
+\input{src/heading.tex}
+
+%-----------EDUCATION-----------%
+\input{src/education.tex}
+%-----------EXPERIENCE-----------%
+\input{src/experience.tex}
+
+%-----------SKILLS-----------%
+\input{src/skills.tex}
+
+%-----------Publications----------%
+\input{src/publications.tex}
+
+
+%-------------------------------------------%
+\end{document} 
