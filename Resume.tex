@@ -19,7 +19,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{bibentry}
+%\usepackage{bibentry}
 %\usepackage{biblatex}
 \input{glyphtounicode}
 
@@ -57,15 +57,15 @@
 
 % Package for listing publications in resume
 
-\usepackage[style=ieee]{biblatex}
-\addbibresource{publications.bib}
-\DeclareFieldFormat{labelnumberwidth}{}
-\setlength{\biblabelsep}{0pt}
-\setlength{\biblabelsep}{0pt}
-\DeclareBibliographyCategory{conf}
-\DeclareBibliographyCategory{publ}
-\addtocategory{conf}{moraux}
-\addtocategory{publ}{angenendt,baez/article}
+%\usepackage[style=ieee]{biblatex}
+%\addbibresource{publications.bib}
+%\DeclareFieldFormat{labelnumberwidth}{}
+%\setlength{\biblabelsep}{0pt}
+%\setlength{\biblabelsep}{0pt}
+%\DeclareBibliographyCategory{conf}
+%\DeclareBibliographyCategory{publ}
+%\addtocategory{conf}{moraux}
+%\addtocategory{publ}{angenendt,baez/article}
 
 
 
@@ -89,8 +89,9 @@
 \input{src/skills.tex}
 
 %-----------Publications----------%
-\input{src/publications.tex}
-
-
+%\input{src/publications.tex}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}
 %-------------------------------------------%
 \end{document} 
